@@ -1,4 +1,4 @@
-from matplotlib.pyplot import plt
+import matplotlib.pyplot as plt
 from dataset.denormalize import *  
 
 def visualization(dataloader_train):
