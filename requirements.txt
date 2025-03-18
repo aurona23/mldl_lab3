@@ -1,8 +1,6 @@
-os
 torchvision
 torch
 matplotlib
 requests
-zipfile
 io
-numpy 
+numpy
