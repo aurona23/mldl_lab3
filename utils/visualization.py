@@ -1,5 +1,5 @@
-from dataset.denormalize import *  
 from matplotlib.pyplot import plt
+from dataset.denormalize import *  
 
 def visualization(dataloader_train):
 # Visualize one example for each class for 10 classes
