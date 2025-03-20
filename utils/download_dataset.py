@@ -1,7 +1,8 @@
-
+import os
 from zipfile import ZipFile
 from io import BytesIO
 import requests
+import shutil
 
 # Define the path to the dataset
 dataset_path = 'http://cs231n.stanford.edu/tiny-imagenet-200.zip'  # Replace with the path to your dataset <- già fatto
@@ -14,3 +15,4 @@ if response.status_code == 200:
     with ZipFile(BytesIO(response.content)) as zip_file:
         zip_file.extractall('./dataset')
     print('Download and extraction complete!')
+
