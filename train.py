@@ -62,8 +62,10 @@ if __name__ == "__main__":
     visualization(dataloader_train=dataloader_train)
     ##############################################################
     #LAB 2
-    tiny_imagenet_dataset_train = ImageFolder(root='./dataset/tiny-imagenet/tiny-imagenet-200/train', transform=transform_2)
-    tiny_imagenet_dataset_val = ImageFolder(root='./dataset/tiny-imagenet/tiny-imagenet-200/test', transform=transform_2)
+
+    
+    tiny_imagenet_dataset_train = ImageFolder(root='tiny-imagenet/tiny-imagenet-200/train', transform=transform_2())
+    tiny_imagenet_dataset_val = ImageFolder(root='tiny-imagenet/tiny-imagenet-200/val', transform=transform_2())
     
     print(f"Length of train dataset: {len(tiny_imagenet_dataset_train)}")
     # print(f"Length of val dataset: {len(tiny_imagenet_dataset_val)}")
