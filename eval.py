@@ -4,7 +4,7 @@ from torchvision.datasets import ImageFolder
 from dataset.transform_dataset import *
 from data.dataloader import *
 from models.custom_net import *
-from train import train, train_loader
+from train import *
 
 # Validation loop
 def validate(model, val_loader, criterion):
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     # print(f"Length of val dataset: {len(tiny_imagenet_dataset_val)}")
 
     # dataloader
-    _, val_loader =  dataloader(tiny_imagenet_dataset_train,tiny_imagenet_dataset_val, batch_size=32, shuffle_train=True, shuffle_test=False)
+    train_loader, val_loader =  dataloader(tiny_imagenet_dataset_train,tiny_imagenet_dataset_val, batch_size=32, shuffle_train=True, shuffle_test=False)
 
     ####################################################
     # TRAIN AND EVAL
